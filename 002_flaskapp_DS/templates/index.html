@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Fraud Claim Detector</title>
+</head>
+<body>
+    <h1>Fraud Claim Detector</h1>
+    
+    <form action="/" method="post">
+        <label for="County">County:</label>
+        <input type="text" name="County" required><br>
+
+        <label for="State">State:</label>
+        <input type="text" name="State" required><br>
+
+        <label for="AttendingPhysician">Attending Physician:</label>
+        <input type="text" name="AttendingPhysician" required><br>
+
+        <label for="OPAnnualReimbursementAmt">OP Annual Reimbursement Amount:</label>
+        <input type="text" name="OPAnnualReimbursementAmt" required><br>
+
+        <label for="InscClaimAmtReimbursed">Insc Claim Amount Reimbursed:</label>
+        <input type="text" name="InscClaimAmtReimbursed" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if pred %}
+        <p>Prediction Probability: {{ pred }}</p>
+    {% endif %}
+</body>
+</html>
